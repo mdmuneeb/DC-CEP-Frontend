@@ -14,10 +14,10 @@ const API_CONFIG = {
     // PAYMENT: 'http://localhost:8004'
 
 
-    USER: 'https://dc-cep-user-service-production.up.railway.app',
-    PRODUCT: 'https://dc-cep-product-service-production.up.railway.app',
-    ORDER: 'https://dc-cep-order-service-production.up.railway.app',
-    PAYMENT: 'https://dc-cep-payment-service-production.up.railway.app'
+    USER: 'https://dc-cep-user-service-production-37e1.up.railway.app',
+    PRODUCT: 'https://dc-cep-product-service-production-f1dc.up.railway.app',
+    ORDER: 'https://dc-cep-order-service-production-ecd9.up.railway.app',
+    PAYMENT: 'https://dc-cep-payment-service-production-dd24.up.railway.app'
 };
 
 // --- State Management ---
@@ -242,7 +242,7 @@ async function processOrder(e) {
         const payData = await payRes.json();
 
         if (payData.payment_status === 'Success') {
-            showToast('Order placed successfully! 🚀');
+            showToast('Order placed successfully!');
             log('Payment confirmed. Transaction complete.', 'info');
             clearCart();
             switchSection('status');
